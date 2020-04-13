@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="rougeole.css" />
+        <title>Tout sur la rougeole</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        
+    </head>
+    <body> 
+
+<center><h2 onMouseOver="this.style.color = 'blue'" onMouseOut="this.style.color ='white'">
+    <span style="text-decoration: underline;">Qu'est-ce que la rougeole ?</span></h2></center>
+
+<p><img src="https://pbs.twimg.com/media/DebilWKXUAAbVuw.jpg" height="400" width="500" alt="informations non disponibles"> </p>
+
+
+<p>  
+La rougeole est un virus qui est membre de la famille des morbillivirus,<br/> (proche de la peste porcine et bovine).<br/> 
+Il ne mute pas, sa strucuture n'a pas change depuis des décénis.<br/> 
+Ce virus à été découvert par un médecin persan nommé Rhazès au 10ème siècle.<br/>
+<br/>
+La rougeole sans complications se caractérise par quatre phases :<br/>
+• une période d’incubation silencieuse<br/>
+• une période d’invasion avec divers symptômes<br/>
+• l'éruption rougeoleuse (apparition de plaques rouges)<br/>
+• une desquamation avec un état de fatigue persistant<br/>
+<br/>
+Mais elle peut aussi avoir des complications, dans 10 à 40% des personnes fragiles ou atteintes de malnutrition.<br/>
+Le plus souvent ce sont les complications des enfants de moins de 5 ans et des adultes de plus de 20 ans qui provoque le décès. 
+</p>
+<p class="p1">
+    source des informations: https://www.youtube.com/watch?v=SFjuoavdLxw<br/>
+    source de l'image: https://pbs.twimg.com/media/DebilWKXUAAbVuw.jpg<br/>
+</p>
+<p class="p2">
+    Pour plus d'explication <a href="https://www.youtube.com/watch?v=SFjuoavdLxw">cliquez ici</a>
+</p>
+
+</p>
+<center>
+<h3 onMouseOver="this.style.color = 'blue'" onMouseOut="this.style.color ='white'">
+    <span style="text-decoration: underline;">L'épidémie</span></h3>
+
+<p>
+    La rougeole est un virus qui à un fort taux de propagation, d'après le médecin Olivier Robinea 
+    un seul malade peut infecter une moyenne de 18 personnes,<br/>
+    non-vacciné, où qui ont déjà été atteints de cette maladie.
+</p>
+
+<p>
+    Pour mieux comprendre comment le virus ce propage au sein d'une population,<br/>
+    nous avons créé une simulation qui explique son comportement. <br/>
+    -les balles bleues = personnes non - infectées,<br/>
+    -les balles rouges = personnes étant infectées,<br/>
+    -les balles grises = personnes guéris du vrius.<br/>
+    Une personne devient infecté si elle est en contact avec un personne malade,<br/>
+    sauf si elle est immunisée ou à deja été atteinte de la rougeole.
+</p>
+<video width="800" height="222" controls="controls">
+    <source src="simulation-1-rougeole.mp4" type="video/mp4" />
+    Animation non disponible.
+  </video>
+<br/>
+<p>
+    Cette simulation, représente le comportement du virus sur une population de 30 personnes.<br/>
+    -les balles bleues = personnes non - infectées,<br/>
+    -les balles rouges = personnes étant infectées,<br/>
+    -les balles grises = personnes guéris du virus.<br/>
+
+</p>
+  <video width="600" height="422" controls="controls">
+    <source src="simulation-2-rougeole.mp4" type="video/mp4" />
+    Animation non disponible.
+  </video>
+  
+  <p class= "p3">
+    EXEMPLE:
+    La plus grosse épidémie connue en Europe est celle de 2018.<br/>
+    Lors de l'année 2017, envrions 24 000 cas de rougeole ont été détéctés en Europe.<br/>
+    Alors que de janvier à juin 2018, on peut en compter environs 41 000 cas,<br/>
+    dont 37 morts enfants et adultes confondus, soit presque que le double de l'année précédente.<br/>
+    En tout elle a entraîné 72 décès d’enfants et d’adultes et 82 596 personnes ayant contracté la rougeole.<br/>
+    Ainsi, près des 2/3 (61 %) des cas de rougeole ont conduit à une hospitalisation. <br/>
+    Le nombre total de personnes infectées par le virus en 2018 était aussi le plus élevé de cette décennie :<br/>
+    3 fois le nombre total signalé en 2017 et 15 fois le nombre exceptionnellement peu élevé de personnes infectées en 2016.
+   </p>
+    
+    
+    <div style="width: 75%">
+    <canvas id="myChart" class="c1"></canvas>
+    </div>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'line',
+    
+            // The data for our dataset
+            data: {
+                labels: ['1','2','3','4', '5', '6', '7', '8', '9','10','11', '12 ', '13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30',
+                         '31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','1','2','3','4','5','6','7','8','9','10',
+                         '11','12'],
+                datasets: [{
+                    label: 'individus contaminés',
+                    backgroundColor: 'rgba(255, 99, 132, 0.25)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [24, 27, 48, 80, 92, 130, 142, 128, 165, 135, 180, 173, 198, 150, 167, 148, 120, 70, 52, 58, 45, 47, 49, 42, 39, 42, 26, 24, 10, 7, 9, 5, 5, 1, 5,
+                            9, 7, 3, 8, 13, 11, 24, 10, 12, 10, 12, 8, 9, 11, 9, 7, 23, 10, 46, 20, 37, 48, 42, 50, 48, 47, 69, 53, 70]
+                }]
+            },
+    
+            // Configuration options go here
+            options: {}
+        });
+    </script>
+
+   <p class="p4">
+    source des informations: http://www.leparisien.fr/societe/rougeole-l-europe-et-la-france-connaissent-une-epidemie-record-21-08-2018-7859622.php<br/>
+    source des informations: http://www.euro.who.int/fr/media-centre/sections/press-releases/2019/measles-in-europe-record-number-of-both-sick-and-immunized
+</p>
+<img alt="animation non disponible" src="images/NSI/essai.gif">
+
+ 
+
+<h5 onMouseOver="this.style.color = 'blue'" onMouseOut="this.style.color ='white'">
+    <span style="text-decoration: underline;">Une solution: le vaccin</span></h5>
+<p class="p5">
+    Le vaccin contre la rougeole à été développé dans les années 60 et mis en vente sur le marché en 1975. <br/>
+    On dit que c'est un vaccin vivant atténué, c'est-à-dire que c'est le virus vivant mais purifié que l'on nous injecte.<br/>
+    Le Plan d’action européen expose la stratégie suivante, adoptée par les 53 États membres en vue d’éliminer la rougeole.<br/>
+    Plus important encore, au moins 95 % de la population doit être immunisée,<br/> 
+    par l’administration de deux doses de vaccin ou une exposition antérieure au virus, afin d’assurer la protection de l’ensemble de la communauté<br/>
+    y compris les bébés trop jeunes pour être vaccinés, et ceux qui ne peuvent être vaccinés en raison de maladies et de problèmes de santé.
+    Mais depuis 1980, seulement 90% de la population en moyenne est vaccinée et même dans certains pays le taux devaccination n'est que de 70%.
+</p>
+<p>
+    Cette animation représente une population d'un pays riche dont 90% sont vaccinées.<br/>
+    -les balles bleues = personnes qui sont vaccinées,<br/>
+    -les balles rouges = personnes qui sont infectées,<br/>
+    -les balles grises = personnes guéris de ce virus.   <br/>
+</p>
+
+<video width="600" height="422" controls="controls">
+    <source src="simulation-3-rougeole.mp4" type="video/mp4" />
+    Animation non disponible.
+  </video>
+
+  <p class="p6">
+    source des informations: http://www.leparisien.fr/societe/rougeole-l-europe-et-la-france-connaissent-une-epidemie-record-21-08-2018-7859622.php<br/>
+    source des informations: http://www.euro.who.int/fr/media-centre/sections/press-releases/2019/measles-in-europe-record-number-of-both-sick-and-immunized
+    </p>
+    
+    <p class="p7">
+        pour plus d'explication sur comment créer un vaccin <a href="https://www.lumni.fr/video/comment-fabrique-t-on-un-vaccin">cliquez ici</a> <br/>
+        Pour plus d'explication sur le vaccin de la rougeole <a href="https://www.youtube.com/watch?v=SFjuoavdLxw">cliquez ici</a>
+    </p>
+<h6 onMouseOver="this.style.color = 'blue'" onMouseOut="this.style.color ='white'">
+    <span style="text-decoration: underline;">Éliminer définitivement la rougeole</span></h6>
+<p class="p8">
+     Afin de prévenir les flambées épidémiques et d’éliminer la rougeole, 
+     les pays doivent maintenir une couverture vaccinale par l’administration de deux doses de vaccin antirougeoleux.<br/>
+     Ils doivent aussi repérer toutes les poches de sous-vaccination dans leur population et prendre les mesures adéquates à cet égard.<br/>
+     Le Bureau régional continue de collaborer avec les États membres de la Région <br/>
+     afin d’améliorer leurs systèmes de vaccination et de surveillance des maladies.<br/>
+     Il s’agit notamment de renforcer les capacités et de délivrer des conseils dans les buts suivants :<br/>
+</p>
+<p class="p9">
+     -veiller à ce que tous les groupes de population bénéficient d’un accès, équitable aux services de vaccination;<br/>
+     -recenser les personnes qui n’ont pas été vaccinées, puis leur administrer les vaccins dont elles auront besoin;<br/>
+     -s’assurer que les agents de santé sont vaccinés, pour prévenir la transmission des maladies, dans les services;<br/>
+     -renforcer la confiance dans les vaccins guérissant la rougeole est important, ainsi que des autorités sanitaires;<br/>
+     -garantir l’accès à un approvisionnement qui doit être rapide mais abordable en vaccins et pour tout le monde;<br/>
+     -améliorer la détection du virus dans un premier temps et ensuite l’intervention en cas de flambée épidémique;<br/>
+     -écouter les populations européennes atteintes de l'épidémie, et ensuite répondre à toutes leurs préoccupations;<br/>
+</p>
+<p class="p10">
+     La plupart des pays de la Région où la couverture vaccinale contre la rougeole est sous-optimale sont des pays à revenu intermédiaire.<br/>
+     Le Bureau régional collabore avec ces pays à la mise en œuvre d’une stratégie coordonnée ciblant plusieurs domaines programmatiques.<br/>
+</p>
+<p class="p11">
+    source des informations:http://www.euro.who.int/fr/media-centre/sections/press-releases/2019/measles-in-europe-record-number-of-both-sick-and-immunized
+</p>
+</center>
+    <meta charset="utf-8">
+</body>
+</html>

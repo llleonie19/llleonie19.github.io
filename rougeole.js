@@ -1,0 +1,1 @@
+alert("Choisissez votre langue et Bonne lecture ! Mais attention images sensibles.")

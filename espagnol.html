@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="rougeole.css" />
+        <title>Todo sobre el sarampión</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        
+    </head>
+    <body> 
+
+
+<center><h2 onMouseOver="this.style.color = 'orangered'" onMouseOut="this.style.color ='white'">
+    <span style="text-decoration: underline;">¿Qué es el sarampión?</span></h2></center>
+
+<p><img src="https://www.lavozdecataratas.com/contenido/fotos/16042019_063652.jpg" height="410" width="700" alt="información no disponible"> </p>
+
+
+<p>  
+    El sarampión es un virus que es miembro de la familia de los morbillivirus,<br/> (cercano a la peste porcina y bovina).<br/> 
+    No está mutando, su estructura no ha cambiado en décadas. <br/>
+    Este virus fue descubierto por un médico persa llamado Rhazès en el siglo X.<br/>
+    El sarampión sin complicaciones se caracteriza por cuatro fases:<br/>
+    <br/>
+    - un periodo de incubación silencioso<br/>
+    - un período de invasión con varios síntomas<br/>
+    - Sarpullido del sarampión (aparición de manchas rojas)<br/>
+    - una descamación con un estado de fatiga persistente<br/>
+    <Br/>
+    Pero también puede tener complicaciones en el 10 al 40% de las personas frágiles o desnutridas.<br/>
+    Lo más frecuente es que las complicaciones en niños menores de 5 años y adultos mayores de 20 años sean las que causen la muerte. 
+</p>
+<p class="p1">
+    fuente de información: https://www.youtube.com/watch?v=SFjuoavdLxw<br/>
+    fuente de la imagen: https://pbs.twimg.com/media/DebilWKXUAAbVuw.jpg<br/>
+</p>
+<p class="p2">
+    Para más explicación <a href="https://www.youtube.com/watch?v=SFjuoavdLxw">clic aquí.</a>
+</p>
+
+</p>
+<center>
+<h3 onMouseOver="this.style.color = 'orangered'" onMouseOut="this.style.color ='white'">
+    <span style="text-decoration: underline;">La epidemia</span></h3>
+
+    <p>
+        El sarampión es un virus que tiene un alto índice de propagación, según el doctor Olivier Robinea. <br/>
+        un solo paciente puede infectar a un promedio de 18 personas,<br/>
+        no vacunados, o que ya han sido afectados por esta enfermedad.
+    </p>
+    
+    <p>
+        Para comprender mejor cómo se propaga el virus dentro de una población, es necesario entender lo siguiente<br/>
+        hemos creado una simulación que explica su comportamiento. <Br/>
+        -bolas azules = personas no infectadas ,<br/>
+        -bolas  rojas = personas son infectadas ,<br/>
+        -balas grises = personas son recuperadas<br/>
+        Una persona se infecta si entra en contacto con una persona enferma, <br/>
+        a menos que sea inmune o ya haya tenido el sarampión.
+
+    </p>
+    <video width="800" height="222" controls="controls">
+        <source src="simulation-1-rougeole.mp4" type="video/mp4" />
+        la animación no está disponible.
+      </video>
+    <br/>
+    <p>
+        Esta simulación, representa el comportamiento del virus en una población de 30 personas.<br/>
+        -bolas azules = personas no infectadas ,<br/>
+        -bolas  rojas = personas son infectadas ,<br/>
+        -balas grises = personas son recuperadas<br/>
+    
+    </p>
+      <video width="600" height="422" controls="controls">
+        <source src="simulation-2-rougeole.mp4" type="video/mp4" />
+        la animación no está disponible.
+      </video>
+
+<p class= "p3">
+    EJEMPLO:
+    La mayor epidemia conocida en Europa es la de 2018.<br/>
+    En el año 2017, se detectaron aproximadamente 24.000 casos de sarampión en Europa. <br/>
+    Mientras que de enero a junio de 2018, hay aproximadamente 41.000 casos,<br/>
+    incluyendo 37 muertes de niños y adultos combinadas, casi el doble que el año anterior.<br/>
+    En total, provocó 72 muertes de niños y adultos y 82.596 personas de 47 de los 53 Estados Miembros contrajeron el sarampión.<br/>
+    Por ejemplo, casi 2/3 (61%) de los casos de sarampión dieron lugar a la hospitalización. <br/>
+    El número total de personas infectadas con el virus en 2018 fue también el más alto de esa década:<br/>
+    3 veces el número total notificado en 2017 y 15 veces el número excepcionalmente bajo de personas infectadas en 2016.<br/>
+    El doctor Olivier Robinea declaró que un solo paciente puede infectar a un promedio de 18 personas...<br/>
+    sin vacunar, o que no lo consiguieron de niños.
+</p>
+<div style="width: 75%">
+    <canvas id="myChart" class="c1"></canvas>
+    </div>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'line',
+    
+            // The data for our dataset
+            data: {
+                labels: ['1','2','3','4', '5', '6', '7', '8', '9','10','11', '12 ', '13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30',
+                         '31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','1','2','3','4','5','6','7','8','9','10',
+                         '11','12'],
+                datasets: [{
+                    label: 'individus contaminés',
+                    backgroundColor: 'rgba(255, 99, 132, 0.25)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [24, 27, 48, 80, 92, 130, 142, 128, 165, 135, 180, 173, 198, 150, 167, 148, 120, 70, 52, 58, 45, 47, 49, 42, 39, 42, 26, 24, 10, 7, 9, 5, 5, 1, 5,
+                            9, 7, 3, 8, 13, 11, 24, 10, 12, 10, 12, 8, 9, 11, 9, 7, 23, 10, 46, 20, 37, 48, 42, 50, 48, 47, 69, 53, 70]
+                }]
+            },
+    
+            // Configuration options go here
+            options: {}
+        });
+    </script>
+
+<p class="p4">
+    fuente de información: http://www.leparisien.fr/societe/rougeole-l-europe-et-la-france-connaissent-une-epidemie-record-21-08-2018-7859622.php<br/>
+    fuente de información: http://www.euro.who.int/fr/media-centre/sections/press-releases/2019/measles-in-europe-record-number-of-both-sick-and-immunized
+</p>
+
+<h4 onMouseOver="this.style.color = 'orangered'" onMouseOut="this.style.color ='white'">
+    <span style="text-decoration: underline;">Una solución: la vacuna</span></h4>
+<p class="p5">
+    La vacuna contra el sarampión se desarrolló en el decenio de 1960 y se introdujo en el mercado en 1975. <br/>
+    Se llama vacuna viva atenuada, lo que significa que es el virus vivo pero purificado que se nos inyecta.<br/>
+    El Plan de Acción Europeo establece la siguiente estrategia adoptada por los 53 Estados Miembros para eliminar el sarampión.<br/>
+    Más importante aún, al menos el 95% de la población debe ser inmunizada,<br/> 
+    administrando dos dosis de la vacuna o una exposición previa al virus, para asegurar la protección de toda la comunidad.<br/>
+    incluyendo a los bebés que son demasiado jóvenes para ser vacunados, y aquellos que no pueden ser vacunados debido a enfermedades y problemas de salud.<br/>
+    Pero desde 1980, en promedio sólo el 90% de la población ha sido vacunada, e incluso en algunos países la tasa de vacunación es tan baja como el 70%.<br/>
+</p>
+
+<p>
+    Esta animación representa a la población de un país rico del cual el 90% está vacunado.<br/>
+    -bolas azules = personas son vacunadas ,<br/>
+    -bolas  rojas = personas son infectadas ,<br/>
+    -balas grises = personas son recuperadas<br/>
+</p>
+<video width="600" height="422" controls="controls">
+    <source src="simulation-3-rougeole.mp4" type="video/mp4" />
+    la animación no está disponible.
+  </video>
+<p class="p6">
+    fuente de información: http://www.leparisien.fr/societe/rougeole-l-europe-et-la-france-connaissent-une-epidemie-record-21-08-2018-7859622.php<br/>
+    fuente de información: http://www.euro.who.int/fr/media-centre/sections/press-releases/2019/measles-in-europe-record-number-of-both-sick-and-immunized
+</p>
+
+<p class="p7">
+    para más explicación sobre cómo crear una vacuna <a href="https://www.lumni.fr/video/comment-fabrique-t-on-un-vaccin">clic aquí</a> <br/>
+    Para más información sobre la vacuna contra el sarampión <a href="https://www.youtube.com/watch?v=SFjuoavdLxw">clic aquí</a>
+</p>
+
+<h5 onMouseOver="this.style.color = 'orangered'" onMouseOut="this.style.color ='white'">
+    <span style="text-decoration: underline;">Eliminar permanentemente el sarampión</span></h5>
+<p class="p8">
+    Para prevenir brotes y eliminar el sarampión, <br/>
+     los países deben mantener la cobertura de inmunización con dos dosis de la vacuna contra el sarampión.<br/>
+     También deben identificar y abordar todos los focos de subvacunación de su población.<br/>
+     La Oficina Regional sigue colaborando con los Estados Miembros de la Región<br/>
+      para mejorar sus sistemas de inmunización y vigilancia de enfermedades.<br/>
+     Esto incluye la creación de capacidad y el asesoramiento para los siguientes propósitos:<br/>
+</p>
+<p class="p9">
+    -asegurar que todos los grupos de población tengan un acceso equitativo a los servicios de inmunización;<br/>
+    -Identificar a las personas que no han sido vacunadas y después administrarles las vacunas que necesiten;<br/>
+    -asegurar que los trabajadores de la salud están vacunados, para prevenir la transmisión de enfermedades;<br/>
+    -Reforzar la confianza en las vacunas contra el sarampión, en las autoridades sanitarias dentro de Europa;<br/>
+    -para poder asegurar el acceso a un suministro rápido pero también asequible para las vacunas, para todos;<br/>
+    -mejorando la detección, respuesta a las epidemias en los senos de la población de los países de europeos ;<br/>
+    -Escuchar a las personas con/sin sarampión responder a todas sus preguntas, preocupaciones sobre el virus;
+</p>
+<p class="p10">
+    La mayoría de los países de la Región en los que la cobertura de la inmunización contra el sarampión no es óptima son países de ingresos medios.<br/>
+    La Oficina Regional está trabajando con esos países para aplicar una estrategia coordinada dirigida a varias esferas programáticas.
+</p>
+<p class="p11">
+    source des informations:http://www.euro.who.int/fr/media-centre/sections/press-releases/2019/measles-in-europe-record-number-of-both-sick-and-immunized
+</p>
+</center>
+    <meta charset="utf-8">
+</body>
+</html>

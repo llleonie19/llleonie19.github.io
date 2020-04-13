@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="rougeole.css" />
+        <title>Tutto sul morbillo</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        
+    </head>
+    <body> 
+<center>
+<h2 onMouseOver="this.style.color = 'green'" onMouseOut="this.style.color ='white'">
+    <span style="text-decoration: underline;">Che cos'è il morbillo?</span></h2>
+</center>
+
+<p><img src="http://www.docgenerici.it/approfondimenti/wp-content/uploads/2017/05/17-lifehacks.jpg" height="380" width="650" alt="informazioni non disponibili"> </p>
+
+
+<p>  
+    Il morbillo è un virus che fa parte della famiglia dei morbillivirus,<br/> (vicino ai suini e alla peste bovina). <br/>
+    Non sta mutando, la sua struttura non è cambiata da decenni. <br/>
+    Questo virus è stato scoperto da un medico persiano di nome Rhazès nel X secolo.<br/>
+    <br/>
+    Il morbillo non complicato è caratterizzato da quattro fasi:<br/>
+    - un periodo di incubazione silenziosa<br/>
+    - un periodo di invasione con vari sintomi<br/>
+    - Eruzione cutanea da morbillo (comparsa di macchie rosse)<br/>
+    - una desquamazione con un persistente stato di stanchezza<br/>
+    <br/>
+    Ma può anche avere complicazioni, nel 10-40% delle persone fragili o malnutrite.<br/>
+    Il più delle volte sono le complicazioni nei bambini sotto i 5 anni e negli adulti oltre i 20 anni a causare la morte. 
+</p>
+<p class="p1">
+    fonte di informazione: https://www.youtube.com/watch?v=SFjuoavdLxw<br/>
+    fonte dell'immagine: https://pbs.twimg.com/media/DebilWKXUAAbVuw.jpg<br/>
+</p>
+<p class="p2">
+    Per ulteriori spiegazioni <a href="https://www.youtube.com/watch?v=SFjuoavdLxw">clicca qui</a>
+</p>
+
+<center>
+<h3 onMouseOver="this.style.color = 'green'" onMouseOut="this.style.color ='white'">
+    <span style="text-decoration: underline;">L'epidemia</span></h3>
+
+    <p>
+        Il morbillo è un virus che ha un alto tasso di diffusione, secondo il medico Olivier Robinea. <br/>
+        un singolo paziente può infettare una media di 18 persone,<br/>
+        non vaccinati, o che sono già stati colpiti da questa malattia.
+    </p>
+    
+    <p>
+        Per capire meglio come il virus si diffonde all'interno di una popolazione, è necessario comprendere quanto segue<br/>
+        abbiamo creato una simulazione che ne spiega il comportamento. <Br/>
+        -palline blu = persone non infette,<br/>
+        -palline rosse = persone infette,<br/>
+        -proiettili grigi = persone guarite.<br/>
+        Una persona si infetta se entra in contatto con un malato,<br/>
+        a meno che non sia immune o abbia già avuto il morbillo.
+
+    </p>
+    <video width="800" height="222" controls="controls">
+        <source src="simulation-1-rougeole.mp4" type="video/mp4" />
+        Animazione non disponibile.
+      </video>
+    <br/>
+    <p>
+        Questa simulazione, rappresenta il comportamento del virus su una popolazione di 30 persone.<br/>
+        -palline blu = persone non infette,<br/>
+        -palline rosse = persone infette,<br/>
+        -proiettili grigi = persone guarite.<br/>
+    
+    </p>
+      <video width="600" height="422" controls="controls">
+        <source src="simulation-2-rougeole.mp4" type="video/mp4" />
+        Animazione non disponibile.
+      </video>
+      
+<p class= "p3">
+    ESEMPIO:
+    La più grande epidemia conosciuta in Europa è quella del 2018.<br/>
+    Nel 2017 sono stati rilevati in Europa circa 24.000 casi di morbillo.<br/>
+    Mentre da gennaio a giugno 2018, ci sono circa 41.000 casi,<br/>
+    tra cui 37 morti di bambini e adulti, quasi il doppio rispetto all'anno precedente.<br/>
+    In totale, ha causato 72 morti di bambini e adulti e 82.596 persone in 47 dei 53 Stati membri hanno contratto il morbillo.<br/>
+    Ad esempio, quasi 2/3 (61%) dei casi di morbillo hanno portato al ricovero in ospedale. <br/>
+    Il numero totale di persone infettate dal virus nel 2018 è stato anche il più alto di quel decennio:<br/>
+    3 volte il numero totale riportato nel 2017 e 15 volte il numero eccezionalmente basso di persone infette nel 2016.<br/>
+    Il dottor Olivier Robinea ha dichiarato che un singolo paziente potrebbe infettare una media di 18 persone,<br/>
+    non vaccinati, o che non l'hanno avuta da bambini.
+</p>
+<div style="width: 75%">
+    <canvas id="myChart" class="c1"></canvas>
+    </div>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'line',
+    
+            // The data for our dataset
+            data: {
+                labels: ['1','2','3','4', '5', '6', '7', '8', '9','10','11', '12 ', '13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30',
+                         '31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','1','2','3','4','5','6','7','8','9','10',
+                         '11','12'],
+                datasets: [{
+                    label: 'individus contaminés',
+                    backgroundColor: 'rgba(255, 99, 132, 0.25)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [24, 27, 48, 80, 92, 130, 142, 128, 165, 135, 180, 173, 198, 150, 167, 148, 120, 70, 52, 58, 45, 47, 49, 42, 39, 42, 26, 24, 10, 7, 9, 5, 5, 1, 5,
+                            9, 7, 3, 8, 13, 11, 24, 10, 12, 10, 12, 8, 9, 11, 9, 7, 23, 10, 46, 20, 37, 48, 42, 50, 48, 47, 69, 53, 70]
+                }]
+            },
+    
+            // Configuration options go here
+            options: {}
+        });
+    </script>
+
+<p class="p4">
+    fonte di informazione: http://www.leparisien.fr/societe/rougeole-l-europe-et-la-france-connaissent-une-epidemie-record-21-08-2018-7859622.php<br/>
+    fonte di informazione: http://www.euro.who.int/fr/media-centre/sections/press-releases/2019/measles-in-europe-record-number-of-both-sick-and-immunized
+</p>
+
+<h4 onMouseOver="this.style.color = 'green'" onMouseOut="this.style.color ='white'">
+    <span style="text-decoration: underline;">Una soluzione: il vaccino</span></h4>
+<p class="p5">
+    Il vaccino contro il morbillo è stato sviluppato negli anni '60 ed è stato introdotto sul mercato nel 1975. <br/>
+    Si chiama vaccino vivo attenuato, il che significa che è il virus vivo ma purificato che ci viene iniettato.<br/>
+    Il Piano d'azione europeo definisce la seguente strategia adottata dai 53 Stati membri per eliminare il morbillo.<br/>
+    Ancora più importante, almeno il 95% della popolazione deve essere immunizzato,<br/> 
+    somministrando due dosi di vaccino o previa esposizione al virus, per garantire la protezione dell'intera comunità<br/>.
+    compresi i bambini troppo giovani per essere vaccinati e quelli che non possono essere vaccinati a causa di malattie e problemi di salute.<br/>
+    Ma dal 1980, in media, solo il 90% della popolazione è stata vaccinata, e anche in alcuni paesi il tasso di vaccinazione è di appena il 70%.
+</p>
+
+<p>
+    Questa animazione rappresenta una popolazione di un paese ricco di cui il 90% è vaccinato.<br/>
+    -palline blu = persone vaccinate,<br/>
+    -palline rosse = persone infette,<br/>
+    -proiettili grigi = persone guarite.<br/>
+</p>
+<video width="600" height="422" controls="controls">
+    <source src="simulation-3-rougeole.mp4" type="video/mp4" />
+    Animazione non disponibile.
+  </video>
+<p class="p6">
+    fonte di informazione: http://www.leparisien.fr/societe/rougeole-l-europe-et-la-france-connaissent-une-epidemie-record-21-08-2018-7859622.php<br/>
+    fonte di informazione: http://www.euro.who.int/fr/media-centre/sections/press-releases/2019/measles-in-europe-record-number-of-both-sick-and-immunized
+</p>
+
+<p class="p7">
+    per ulteriori spiegazioni su come creare un vaccino <a href="https://www.lumni.fr/video/comment-fabrique-t-on-un-vaccin">clicca qui</a> <br/>
+    Per ulteriori informazioni sul vaccino contro il morbillo <a href="https://www.youtube.com/watch?v=SFjuoavdLxw">clicca qui</a>
+</p>
+
+<h5 onMouseOver="this.style.color = 'green'" onMouseOut="this.style.color ='white'">
+    <span style="text-decoration: underline;">Eliminare definitivamente il morbillo</span></h5>
+<p class="p8">
+    Per prevenire le epidemie ed eliminare il morbillo,<br/>
+    i paesi dovrebbero mantenere la copertura immunitaria con due dosi di vaccino contro il morbillo.<br/>
+    Devono anche identificare e affrontare tutte le sacche di sottovaccinazione della loro popolazione.<br/>
+    L'Ufficio regionale continua a lavorare con gli Stati membri della Regione per migliorare<br/>
+    i loro sistemi di immunizzazione e di sorveglianza delle malattie.<br/>
+    Ciò include il rafforzamento delle capacità e la consulenza per i seguenti scopi:<br/>
+</p>
+<p class="p9">
+     -assicurare che tutti i gruppi della popolazione abbiano un accesso equo, ai servizi di immunizzazione;<br/>
+     -identificare le persone che non sono state vaccinate e poi dare loro tutti i vaccini di cui hanno bisogno;<br/>
+     -assicurare che gli operatori sanitari siano vaccinati per prevenire la trasmissione di malattie nei servizi;<br/>
+     -rafforzare la fiducia nei vaccini contro il morbillo è importante, così come lo sono le autorità sanitarie;<br/>
+     -garantire l'accesso ad una fornitura che deve essere veloce ma anche accessibile per i vaccini e per tutti;<br/>
+     -migliorare il rilevamento del virus nella popolazione e successivamente migliorare la risposta ai focolai ;<br/>
+     -ascoltando le popolazioni europee colpite dall'epidemia, e rispondendo poi a tutte le loro preoccupazioni;<br/>
+</p>
+<p class="p10">
+    La maggior parte dei paesi della regione in cui la copertura dell'immunizzazione contro il morbillo è sub-ottimale sono paesi a medio reddito.<br/>
+    L'Ufficio regionale sta lavorando con questi paesi per attuare una strategia coordinata che si rivolge a diverse aree programmatiche.
+</p>
+<p class="p11">
+    source des informations:http://www.euro.who.int/fr/media-centre/sections/press-releases/2019/measles-in-europe-record-number-of-both-sick-and-immunized
+</p>
+</center>
+    <meta charset="utf-8">
+</body>
+</html>

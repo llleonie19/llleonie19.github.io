@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="rougeole.css" />
+        <title>all about measles</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    </head>
+    <body> 
+<center>
+<h2 onMouseOver="this.style.color = 'palevioletred'" onMouseOut="this.style.color ='white'">
+    <span style="text-decoration: underline;">What is measles?</span></h2></center>
+
+<p><img src="http://pregnantincapetown.co.za/wp-content/uploads/2017/03/Measles-infographic-e1489003860926.jpg" height="350" width="400" alt="information unavailable"> </p>
+
+
+<p>  
+    Measles is a virus that is a member of the morbillivirus family,<br/> (close to swine and rinderpest).<br/> 
+    It doesn't mutate, its structure hasn't changed in decades.<br/> 
+    This virus was discovered by a Persian doctor named Rhazès in the 10th century.<br/>
+<br/>
+Uncomplicated measles is characterized by four phases:<br/>
+• a silent incubation period<br/>
+• a period of invasion with various symptoms<br/>
+• measles rash (appearance of red patches)<br/>
+• a desquamation with a persistent state of fatigue<br/>
+<br/>
+But it can also have complications, in 10 to 40% of frail or malnourished people.<br/>
+Most often it is complications in children under 5 years of age and adults over 20 years of age that cause death. 
+</p>
+<p class="p1">
+    source of informations: https://www.youtube.com/watch?v=SFjuoavdLxw<br/>
+    source of the picture: https://pbs.twimg.com/media/DebilWKXUAAbVuw.jpg<br/>
+</p>
+<p class="p2">
+    More explanations <a href="https://www.youtube.com/watch?v=SFjuoavdLxw">click here</a>
+</p>
+
+<center>
+<h3 onMouseOver="this.style.color = 'palevioletred'" onMouseOut="this.style.color ='white'">
+    <span style="text-decoration: underline;">The epidemic
+    </span></h3>
+
+    <p>
+        Measles is a virus that has a high rate of spread, according to doctor Olivier Robinea. <br/>
+        a single patient can infect an average of 18 people,<br/>
+        unvaccinated, or who have already been affected by this disease.
+    </p>
+    
+    <p>
+        To better understand how the virus spreads within a population, it is necessary to understand the following <br/>
+        we've created a simulation that explains its behaviour. <Br/>
+        -blue balls = people who aren't infected,<br/>
+        -red  balls = people who are infected ,<br/>
+        -gray balls = people who are recovered.<br/>
+        A person becomes infected if he or she comes into contact with a sick person,<br/>
+        unless she's immune or has already had measles.
+    </p>
+
+    <video width="800" height="222" controls="controls">
+        <source src="simulation-1-rougeole.mp4" type="video/mp4" />
+        animation not available.
+      </video>
+    <br/>
+    <p>
+        This simulation, represents the behaviour of the virus on a population of 30 people.<br/>
+        -blue balls = people who aren't infected,<br/>
+        -red  balls = people who are infected ,<br/>
+        -gray balls = people who are recovered.<br/>
+    
+    </p>
+      <video width="600" height="422" controls="controls">
+        <source src="simulation-2-rougeole.mp4" type="video/mp4" />
+        animation not available.
+      </video>
+      
+    <p class= "p3">
+    EXEMPLE:
+    The largest known epidemic in Europe is the 2018 epidemic.
+    In the year 2017, approximately 24,000 cases of measles were detected in Europe.< br/>
+    While from January to June 2018, there are approximately 41,000 cases,<br/>
+    including 37 deaths of children and adults combined, almost double the previous year.<br/>
+    In all, it resulted in 72 deaths of children and adults and 82,596 people in 47 of the 53 Member States contracted measles.<br/>
+    For example, nearly 2/3 (61%) of measles cases resulted in hospitalization. <br/>
+    The total number of people infected with the virus in 2018 was also the highest in that decade:<br/>
+    3 times the total number reported in 2017 and 15 times the exceptionally low number of infected people in 2016.
+    Doctor Olivier Robinea stated that a single patient could infect an average of 18 people,<br/>
+    unvaccinated, or who didn't get it as children.
+</p>
+
+<div style="width: 75%">
+    <canvas id="myChart" class="c1"></canvas>
+    </div>
+    <script>
+        var ctx = document.getElementById('myChart').getContext('2d');
+        
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'line',
+    
+            // The data for our dataset
+            data: {
+                labels: ['1','2','3','4', '5', '6', '7', '8', '9','10','11', '12 ', '13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30',
+                         '31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','1','2','3','4','5','6','7','8','9','10',
+                         '11','12'],
+                datasets: [{
+                    label: 'individus contaminés',
+                    backgroundColor: 'rgba(255, 99, 132, 0.25)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [24, 27, 48, 80, 92, 130, 142, 128, 165, 135, 180, 173, 198, 150, 167, 148, 120, 70, 52, 58, 45, 47, 49, 42, 39, 42, 26, 24, 10, 7, 9, 5, 5, 1, 5,
+                            9, 7, 3, 8, 13, 11, 24, 10, 12, 10, 12, 8, 9, 11, 9, 7, 23, 10, 46, 20, 37, 48, 42, 50, 48, 47, 69, 53, 70]
+                }]
+            },
+    
+            // Configuration options go here
+            options: {}
+        });
+    </script>
+
+<p class="p4">
+    source of informations: http://www.leparisien.fr/societe/rougeole-l-europe-et-la-france-connaissent-une-epidemie-record-21-08-2018-7859622.php<br/>
+    source of informations: http://www.euro.who.int/fr/media-centre/sections/press-releases/2019/measles-in-europe-record-number-of-both-sick-and-immunized
+</p>
+
+<h4 onMouseOver="this.style.color = 'palevioletred'" onMouseOut="this.style.color ='white'">
+    <span style="text-decoration: underline;">One solution: the vaccine</span></h4>
+<p class="p5">
+    The measles vaccine was developed in the 1960s and was introduced to the market in 1975. <br/>
+    It's called a live attenuated vaccine, which means that it's the live but purified virus that's injected into us.<br/>
+    The European Action Plan sets out the following strategy adopted by the 53 Member States to eliminate measles.<br/>
+    More importantly, at least 95% of the population must be immunized,<br/> 
+    by administering two doses of vaccine or prior exposure to the virus, to ensure protection of the entire community<br/>
+    including babies who are too young to be vaccinated, and those who cannot be vaccinated due to illness and health problems.
+    But since 1980, on average only 90% of the population has been vaccinated, and even in some countries the rate of vaccination is as low as 70%.
+</p>
+
+<p>
+    This animation represents a population of a rich country of which 90% are vaccinated.<br/>
+    -blue balls = people who are vaccinated,<br/>
+    -red  balls = people who are infected ,<br/>
+    -gray balls = people who are recovered.<br/>
+</p>
+<video width="600" height="422" controls="controls">
+    <source src="simulation-3-rougeole.mp4" type="video/mp4" />
+    animation not available.
+  </video>
+
+<p class="p6">
+source of informations: http://www.leparisien.fr/societe/rougeole-l-europe-et-la-france-connaissent-une-epidemie-record-21-08-2018-7859622.php<br/>
+source of informations: http://www.euro.who.int/fr/media-centre/sections/press-releases/2019/measles-in-europe-record-number-of-both-sick-and-immunized
+</p>
+
+<p class="p7">
+    More explanations on how to create a vaccine <a href="https://www.lumni.fr/video/comment-fabrique-t-on-un-vaccin">click here</a> <br/>
+    More explanations on a vaccine of measles <a href="https://www.youtube.com/watch?v=SFjuoavdLxw">click here</a>
+</p>
+
+<h5 onMouseOver="this.style.color = 'palevioletred'" onMouseOut="this.style.color ='white'">
+    <span style="text-decoration: underline;">Permanently eliminate measles</span></h5>
+<p class="p8">
+    To prevent outbreaks and eliminate measles, 
+    countries should maintain immunization coverage with two doses of measles vaccine.<br/>
+    They must also identify and address all pockets of under-vaccination in their population.<br/>
+    The Regional Office continues to work with Member States in the Region to improve their immunization and disease surveillance systems.<br/>
+    This includes capacity building and advice for the following purposes:<br/>
+</p>
+<p class="p9">
+    -ensure, that all population groups have, equitable access to immunization services;<br/>
+    -identify people who haven't been vaccinated and give them the vaccines they need;<br/>
+    -ensure that health workers are vaccinated, to prevent virus transmission in services;<br/>
+    -strengthening confidence in measles vaccines is important and as health authorities;<br/>
+    -ensure access to a rapid, but affordable supply of vaccines, for all people in Europe;<br/>
+    -improve detection in the first instance, and then, the response to a sudden outbreak ;<br/>
+    -listen to the populations affected by the epidemic and then respond to their concerns;<br/>
+</p>
+<p class="p10">
+    Most of the countries in the Region where measles immunization coverage is sub-optimal are middle-income countries.<br/>
+    The Regional Office is working with these countries to implement a coordinated strategy targeting several programmatic areas.
+</p>
+<p class="p11">
+    source des informations:http://www.euro.who.int/fr/media-centre/sections/press-releases/2019/measles-in-europe-record-number-of-both-sick-and-immunized
+</p>
+</center>
+
+    <meta charset="utf-8">
+</body>
+</html>
